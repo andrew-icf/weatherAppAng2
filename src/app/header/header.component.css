@@ -1,0 +1,22 @@
+li a {
+  text-decoration: none;
+  float: left;
+  margin-right: 2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: #FFF;
+  padding: 5px;
+}
+ul {
+  list-style-type: none;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+}
+.nav-wrapper {
+  width: 100%;
+  height: 10rem;
+  background-color: blue;
+  margin-top: -20px;
+}
