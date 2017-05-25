@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CurrentComponent } from './current/current.component';
 import { ForecastComponent } from './forecast/forecast.component';
+import { weatherRouting } from './weather.routing';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ForecastComponent } from './forecast/forecast.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    weatherRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
