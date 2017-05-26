@@ -15,9 +15,9 @@ export class WeatherService {
     '72');
   constructor(private http:Http) { }
 
-  currentWeather() {
-    return this.current;
-  }
+  // currentWeather() {
+  //   return this.current;
+  // }
 
   localWeather(lat:string, long:string) {
     return this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=f98fd6d223721339818d01667b4d21a5&units=imperial`)
