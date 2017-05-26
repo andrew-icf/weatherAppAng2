@@ -10,6 +10,7 @@ import { ForecastComponent } from './forecast/forecast.component';
 
 import { weatherRouting } from './weather.routing';
 import { WeatherService } from './weather.service';
+import { ResolveLocationService } from './resolve-location.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { WeatherService } from './weather.service';
     HttpModule,
     weatherRouting
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, ResolveLocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
