@@ -10,13 +10,13 @@ li a {
 ul {
   list-style-type: none;
 }
-h2 {
+h1 {
   display: flex;
   justify-content: center;
 }
 .nav-wrapper {
   width: 100%;
   height: 10rem;
-  background-color: blue;
-  margin-top: -20px;
+  background-color: teal;
+  margin-top: -22px;
 }
