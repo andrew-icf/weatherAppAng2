@@ -9,7 +9,7 @@ export class WeatherService {
   myWeather: CurrentWeather;
   location
   constructor(private http:Http) { }
-  
+
   localWeather() {
     return new Promise ((res, rej) => {
       navigator.geolocation.getCurrentPosition((pos) => {
@@ -30,7 +30,10 @@ export class WeatherService {
         });
       });
     });
-    // return this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=f98fd6d223721339818d01667b4d21a5&units=imperial`)
-    //   .map((response:Response) => response.json());
+  }
+
+  cityWeatherSearch(city:string) {
+    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f98fd6d223721339818d01667b4d21a5&units=imperial`)
+    .map((response:Response) => response.json());
   }
 }
