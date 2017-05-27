@@ -1,5 +1,5 @@
-<form>
-  <input type="text" name="" value="">
+<form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="forecastCity">
   <button type="button">GO</button>
 </form>
 <div class="container">

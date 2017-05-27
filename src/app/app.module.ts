@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // FormsModule = template ReactiveFormsModule = Data Driven
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -23,7 +23,8 @@ import { ResolveLocationService } from './resolve-location.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    weatherRouting
+    weatherRouting,
+    ReactiveFormsModule
   ],
   providers: [WeatherService, ResolveLocationService],
   bootstrap: [AppComponent]
