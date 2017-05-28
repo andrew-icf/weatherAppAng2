@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/RX';
 
 import { CurrentWeather } from './current-weather';
+import { Forecast } from './forecast';
 
 @Injectable()
 export class WeatherService {
@@ -34,6 +35,11 @@ export class WeatherService {
 
   cityWeatherSearch(city:string) {
     return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f98fd6d223721339818d01667b4d21a5&units=imperial`)
+    .map((response:Response) => response.json());
+  }
+
+  fiveDayForecast(city:string) {
+    return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=f98fd6d223721339818d01667b4d21a5&units=imperial`)
     .map((response:Response) => response.json());
   }
 }
