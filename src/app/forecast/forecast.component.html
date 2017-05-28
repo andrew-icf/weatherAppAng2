@@ -3,34 +3,10 @@
   <button type="button">GO</button>
 </form>
 <div class="container">
-  <div class="day">
-    <h2>Date</h2>
-    <img src="http://openweathermap.org/img/w/01d.png" alt="icon">
-    <h3>Max</h3>
-    <h3>Min</h3>
-  </div>
-  <div class="day">
-    <h2>Date</h2>
-    <img src="http://openweathermap.org/img/w/01d.png" alt="icon">
-    <h3>Max</h3>
-    <h3>Min</h3>
-  </div>
-  <div class="day">
-    <h2>Date</h2>
-    <img src="http://openweathermap.org/img/w/01d.png" alt="icon">
-    <h3>Max</h3>
-    <h3>Min</h3>
-  </div>
-  <div class="day">
-    <h2>Date</h2>
-    <img src="http://openweathermap.org/img/w/01d.png" alt="icon">
-    <h3>Max</h3>
-    <h3>Min</h3>
-  </div>
-  <div class="day">
-    <h2>Date</h2>
-    <img src="http://openweathermap.org/img/w/01d.png" alt="icon">
-    <h3>Max</h3>
-    <h3>Min</h3>
+  <div class="day" *ngFor="let day of cityForecast">
+    <h2>{{day.day | date:'MMMM d'}}</h2>
+    <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="icon">
+    <h3>{{day.tempMax}}&deg;</h3>
+    <h3>{{day.tempMin}}&deg;</h3>
   </div>
 </div>

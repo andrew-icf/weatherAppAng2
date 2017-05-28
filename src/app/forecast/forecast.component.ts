@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import 'rxjs/Rx';
+import 'rxjs/RX';
 
 import { Forecast } from '../forecast';
 import { WeatherService } from '../weather.service';
@@ -24,8 +24,8 @@ export class ForecastComponent implements OnInit {
   }
 
   onSubmit() {
+    this.cityForecast = []; // this.cityForecast.splice(0, this.cityForecast.length);
     this.weatherService.fiveDayForecast(this.forecastForm.value.forecastCity).subscribe((data) => {
-      console.log(data);
       for (let i = 0; i < data.list.length; i += 8) {
         const temporary = new Forecast(
           data.list[i].dt_txt,
@@ -35,7 +35,6 @@ export class ForecastComponent implements OnInit {
 
         this.cityForecast.push(temporary);
       }
-      console.log('this.cityForecast', this.cityForecast);
     });
   }
 
